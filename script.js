@@ -15,3 +15,9 @@ inputField.addEventListener("keyup", (e) => {
     requestApi(inputField.value);
   }
 });
+
+function requestApi(city) {
+  api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=fc5852b1dfd144fe4c48e2ed3b72bdfb
+  `;
+  fetchData();
+}
