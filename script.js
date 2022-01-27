@@ -30,6 +30,16 @@ function requestApi(city) {
   fetchData();
 }
 
+function onSuccess(position) {
+  const { latitude, longitude } = position.coords;
+  api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=fc5852b1dfd144fe4c48e2ed3b72bdfb`;
+  fetchData();
+}
+function onError(error) {
+  infoTxt.innerText = error.message;
+  infoTxt.classList.add("error");
+}
+
 function weatherDetails(info) {
   console.log(info);
 }
