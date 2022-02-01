@@ -31,6 +31,11 @@ body {
   align-items: center;
   border-bottom: 1px solid #ccc;
 }
+
+.github{
+  color: #43affc;
+  margin-top: 10px
+}
 header i {
   font-size: 0em;
   cursor: pointer;
